@@ -13,3 +13,5 @@ export CACHE_DIR=$2
 export ENV_DIR=$3
 
 cp example.sh "$BUILD_DIR"/example.sh
+cd "$BUILD_DIR"
+chmod +x example.sh
