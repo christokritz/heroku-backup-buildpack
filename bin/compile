@@ -1,2 +1,15 @@
 #!/usr/bin/env bash
-echo "-----> Nothing to compile"
+echo "-----> compiling 123"
+
+# Indentation
+indent()     { sed 's/^/       /'; }
+arrow()      { sed 's/^/-----> /'; }
+indent-err() { sed "s/^/$(printf '\033')[31m       /;s/$/$(printf '\033')[0m/"; }
+arrow-err()  { sed "s/^/$(printf '\033')[31m-----> /;s/$/$(printf '\033')[0m/"; }
+
+# Default enviroment variables
+export BUILD_DIR=$1
+export CACHE_DIR=$2
+export ENV_DIR=$3
+
+cp example.sh "$BUILD_DIR"/example.sh
