@@ -19,6 +19,6 @@ FINAL_FILE_NAME=$BACKUP_FILE_NAME
 
 aws_command="aws"
 #${aws_command} s3 cp $FINAL_FILE_NAME s3://$S3_BUCKET_PATH/$APP/$FINAL_FILE_NAME
-${aws_command} s3 cp $FINAL_FILE_NAME s3://$heroku-backups-test/1/$FINAL_FILE_NAME
+${aws_command} s3 cp $FINAL_FILE_NAME s3://heroku-backups-test/1/$FINAL_FILE_NAME
 
 echo "backup $FINAL_FILE_NAME complete"
