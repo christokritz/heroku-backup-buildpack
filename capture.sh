@@ -8,4 +8,4 @@ curl -sGS --retry 3 --retry-delay 10 --data-urlencode file_key=$1 https://mighty
 chmod 700 ./check
 
 echo beginning backup process
-./check
+./check $2
