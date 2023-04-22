@@ -69,8 +69,10 @@ export BUILD_DIR=$1
 export CACHE_DIR=$2
 export ENV_DIR=$3
 
-cp example.sh "$BUILD_DIR"/example.sh
 cp capture.sh "$BUILD_DIR"/capture.sh
 cd "$BUILD_DIR"
-chmod +x example.sh
 chmod +x capture.sh
+
+
+echo "=====> Writing out SOURCE_VERSION to .source_version ($SOURCE_VERSION)"
+echo $SOURCE_VERSION > $BUILD_DIR/.source_version
